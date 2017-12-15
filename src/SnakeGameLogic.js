@@ -48,22 +48,15 @@ SnakeGameLogic.prototype.nextState = function () {
       break;
   }
   if (this.joints[0].x === this.fruit.x && this.joints[0].y === this.fruit.y) {
-    this.fruit.x = Math.floor(Math.random() * 5);
-    this.fruit.y = Math.floor(Math.random() * 5);
-
-    for(let c of this.joints){
-      if(this.fruit.x === c.x && this.fruit.y === c.y){
-        this.fruit.x = Math.floor(Math.random() * 5);
-        this.fruit.y = Math.floor(Math.random() * 5);
-        console.log('ccccccccc');
-      }
-    }
-
+     do{
+       this.fruit.x = Math.floor(Math.random() * COLS);
+       this.fruit.y = Math.floor(Math.random() * ROWS);
+     } while (this.joints.some(j => j.x === this.fruit.x && j.y === this.fruit.y));
     }else{
     this.joints.pop();
   }
 
-  if(!this.joints.includes(this.joints[0] , 1)){
+  if()){
     console.log('aaaa');
 
   }
