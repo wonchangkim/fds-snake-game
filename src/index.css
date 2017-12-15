@@ -26,15 +26,20 @@ body {
 }
 
 .game.end .joint {
-  background-color: black;
+ border-radius: 50%;
+ background: radial-gradient(ellipse at center, rgba(181, 189, 200, 1) 0%, rgba(130, 140, 149, 1) 36%, rgba(40, 52, 59, 1) 100%);
+
 }
 
 .joint {
-  background-color: #ccc;
+  border-radius: 50%;
+
+  background: radial-gradient(ellipse at center, rgba(255, 218, 181, 1) 0%, rgba(255, 123, 13, 1) 100%);
+
 }
 
 .fruit {
-  background-color: red;
+  background-color: rgb(89, 0, 255);
 }
 
 .description {
